@@ -6,7 +6,6 @@ class Screen:
         self.device = device
 
     def wakeup_screen(self):
-        """ Wakes up screen """
         self.device.adb.run("shell", "input", "keyevent", "KEYCODE_WAKEUP")
 
     def get_screen_size(self):

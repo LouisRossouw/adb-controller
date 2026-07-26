@@ -14,3 +14,11 @@ class App:
 
     def is_app_focused(self, app):
         return app in self._get_focused()
+
+    def stop(self, package):
+        self.device.adb.run(
+            "shell",
+            "am",
+            "force-stop",
+            package,
+        )

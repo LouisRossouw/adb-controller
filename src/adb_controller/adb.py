@@ -1,3 +1,4 @@
+from pathlib import Path
 import subprocess
 import time
 
@@ -45,3 +46,22 @@ class ADB:
         )
 
         return result.stdout
+
+    def push(self, local_path, remote_path):
+        local_path = str(Path(local_path))
+
+        self.run("push", local_path, remote_path)
+
+    def scan_dir(self, path=None):
+        if not path:
+            return
+
+        self.run(
+            "shell",
+            "am",
+            "broadcast",
+            "-a",
+            "android.intent.action.MEDIA_SCANNER_SCAN_FILE",
+            "-d",
+            path,
+        )

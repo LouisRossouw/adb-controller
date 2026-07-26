@@ -20,3 +20,6 @@ class Instagram:
     def open_account(self, acc):
         self.device.adb.run("shell", "am", "start", "-a", "android.intent.action.VIEW",
                             "-d", f"{self.URL}/{acc}/")
+
+    def close(self):
+        self.device.app.stop(self.PACKAGE)
