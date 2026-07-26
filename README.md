@@ -2,12 +2,26 @@
 
 - WIP
 
-To automate a physical Android device.
+Simple package for my personal use to automate a physical Android device.
+
+## Installation
 
 ### Requirements:
 
 1. Download and install Android Debug Bridge (ADB): https://developer.android.com/tools/adb
 2. Add the ADB installation directory to your system's PATH environment variable.
+
+### Install this package
+
+1. Clone the repository:
+2. git clone <repository-url>
+3. cd adb-controller
+
+4. Install in editable development mode:
+   pip install -e .
+
+The package can now be imported from any Python project:
+from adb_controller import Device
 
 ### Connect via USB:
 

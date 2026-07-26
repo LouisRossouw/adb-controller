@@ -1,10 +1,10 @@
-from adb import ADB
-from app import App
-from input import Input
-from power import Power
-from navigate import Nav
-from screen import Screen
-from instagram import Instagram
+from .adb import ADB
+from .app import App
+from .input import Input
+from .power import Power
+from .navigate import Nav
+from .screen import Screen
+from .package.instagram import Instagram
 
 
 class Device:

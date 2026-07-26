@@ -1,5 +1,9 @@
 
-__pycache__
+__pycache__/
 venv
 .env
 screen.png
+*.egg-info/
+build/
+dist/
+*.py[cod]

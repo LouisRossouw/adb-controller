@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "adb-controller"
+version = "0.1.0"
+description = "A simple Python library for Android device automation using ADB."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+    { name = "Louis Rossouw" }
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
