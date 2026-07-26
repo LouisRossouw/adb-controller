@@ -5,8 +5,8 @@ class Input:
         self.device = device
 
     def tap(self, x, y):
-        self.adb.run("shell", "input", "tap", str(x), str(y))
+        self.device.adb.run("shell", "input", "tap", str(x), str(y))
 
     def swipe(self, x_start, y_start, x_end, y_end):
-        self.adb.run("shell", "input", "swipe", str(x_start),
-                     str(y_start), str(x_end), str(y_end))
+        self.device.adb.run("shell", "input", "swipe", str(x_start),
+                            str(y_start), str(x_end), str(y_end))

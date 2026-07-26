@@ -8,4 +8,4 @@ class Power:
         return "state=ON" in self.device.get_power_stats()
 
     def set_state_on(self):
-        self.device.screen.wake_screen
+        self.device.screen.wakeup_screen()
